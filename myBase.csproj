@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEEB1B90-CAA1-4E81-B109-39284DCB7530}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>myBase</RootNamespace>
+    <AssemblyName>myBase</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Image\icon_3valpgadxcs\alipay.png" />
+    <Content Include="Image\icon_3valpgadxcs\dingtalk.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_1.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_10.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_11.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_12.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_13.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_14.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_15.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_16.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_17.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_18.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_19.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_2.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_20.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_21.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_22.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_23.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_24.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_25.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_26.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_27.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_28.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_29.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_3.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_30.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_31.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_32.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_33.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_34.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_35.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_36.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_37.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_38.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_39.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_4.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_40.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_41.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_42.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_43.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_44.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_45.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_46.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_47.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_48.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_49.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_5.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_50.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_51.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_52.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_53.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_54.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_55.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_56.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_57.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_58.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_59.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_6.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_60.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_61.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_62.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_63.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_64.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_65.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_66.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_67.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_68.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_69.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_7.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_70.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_71.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_72.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_73.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_74.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_75.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_76.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_77.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_78.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_79.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_8.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_80.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_81.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_82.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_83.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_84.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_85.png" />
+    <Content Include="Image\icon_3valpgadxcs\icon-test_9.png" />
+    <Content Include="Image\icon_3valpgadxcs\taobao.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

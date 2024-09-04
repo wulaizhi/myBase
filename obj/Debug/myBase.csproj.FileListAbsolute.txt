@@ -1,0 +1,10 @@
+F:\c#\BaseUi\myBase\bin\Debug\myBase.exe.config
+F:\c#\BaseUi\myBase\bin\Debug\myBase.exe
+F:\c#\BaseUi\myBase\bin\Debug\myBase.pdb
+F:\c#\BaseUi\myBase\obj\Debug\myBase.csproj.AssemblyReference.cache
+F:\c#\BaseUi\myBase\obj\Debug\myBase.Properties.Resources.resources
+F:\c#\BaseUi\myBase\obj\Debug\myBase.csproj.GenerateResource.cache
+F:\c#\BaseUi\myBase\obj\Debug\myBase.csproj.CoreCompileInputs.cache
+F:\c#\BaseUi\myBase\obj\Debug\myBase.exe
+F:\c#\BaseUi\myBase\obj\Debug\myBase.pdb
+F:\c#\BaseUi\myBase\obj\Debug\myBase.Base.resources
