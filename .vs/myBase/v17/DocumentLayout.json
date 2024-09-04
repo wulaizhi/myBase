@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|solutionrelative:base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|f:\\c#\\baseui\\mybase\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|F:\\c#\\BaseUi\\myBase\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|solutionrelative:base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|f:\\c#\\baseui\\mybase\\base.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|F:\\c#\\BaseUi\\myBase\\base.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEEB1B90-CAA1-4E81-B109-39284DCB7530}|myBase.csproj|solutionrelative:base.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Base.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T07:19:44.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T07:19:44.884Z"
             },
             {
               "$type": "Document",
@@ -61,7 +60,7 @@
               "RelativeDocumentMoniker": "Base.cs",
               "ToolTip": "F:\\c#\\BaseUi\\myBase\\Base.cs",
               "RelativeToolTip": "Base.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T07:20:01.047Z",
               "EditorCaption": ""
@@ -75,8 +74,7 @@
               "ToolTip": "F:\\c#\\BaseUi\\myBase\\Base.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "Base.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T02:39:50.237Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2024-09-04T02:39:50.237Z"
             }
           ]
         }
