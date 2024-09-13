@@ -24,7 +24,7 @@ namespace myBase
             base.Dispose(disposing);
         }
         bool sidbarExpend = true;
-        bool honmebarExpend = true;
+        bool honmebarExpend = false;
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
@@ -139,7 +139,6 @@ namespace myBase
             this.sidBar = new System.Windows.Forms.FlowLayoutPanel();
             this.he = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.panLine = new System.Windows.Forms.Panel();
             this.homeBarFpanl = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -150,22 +149,30 @@ namespace myBase
             this.button2 = new System.Windows.Forms.Button();
             this.sidBarTimer = new System.Windows.Forms.Timer(this.components);
             this.homeBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.MaxIcon = new myBase.UControls.UIconButton();
+            this.MinIcon = new myBase.UControls.UIconButton();
+            this.CloseIcon = new myBase.UControls.UIconButton();
+            this.ContentPanel = new System.Windows.Forms.Panel();
+            this.panelBarHeader = new System.Windows.Forms.FlowLayoutPanel();
             this.sidBar.SuspendLayout();
             this.he.SuspendLayout();
             this.homeBarFpanl.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidBar
             // 
             this.sidBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.sidBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sidBar.Controls.Add(this.he);
-            this.sidBar.Controls.Add(this.panLine);
             this.sidBar.Controls.Add(this.homeBarFpanl);
             this.sidBar.Controls.Add(this.button3);
             this.sidBar.Controls.Add(this.button4);
             this.sidBar.Controls.Add(this.button2);
             this.sidBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidBar.Location = new System.Drawing.Point(0, 0);
+            this.sidBar.Margin = new System.Windows.Forms.Padding(0);
             this.sidBar.Name = "sidBar";
             this.sidBar.Size = new System.Drawing.Size(250, 800);
             this.sidBar.TabIndex = 0;
@@ -175,7 +182,7 @@ namespace myBase
             this.he.Controls.Add(this.button5);
             this.he.Location = new System.Drawing.Point(3, 3);
             this.he.Name = "he";
-            this.he.Size = new System.Drawing.Size(250, 110);
+            this.he.Size = new System.Drawing.Size(250, 120);
             this.he.TabIndex = 0;
             // 
             // button5
@@ -186,7 +193,7 @@ namespace myBase
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(2, 24);
+            this.button5.Location = new System.Drawing.Point(3, 40);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(250, 50);
@@ -196,21 +203,13 @@ namespace myBase
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panLine
-            // 
-            this.panLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panLine.Location = new System.Drawing.Point(3, 119);
-            this.panLine.Name = "panLine";
-            this.panLine.Size = new System.Drawing.Size(250, 3);
-            this.panLine.TabIndex = 1;
-            // 
             // homeBarFpanl
             // 
             this.homeBarFpanl.Controls.Add(this.button1);
             this.homeBarFpanl.Controls.Add(this.button8);
             this.homeBarFpanl.Controls.Add(this.button6);
             this.homeBarFpanl.Controls.Add(this.button7);
-            this.homeBarFpanl.Location = new System.Drawing.Point(3, 128);
+            this.homeBarFpanl.Location = new System.Drawing.Point(3, 129);
             this.homeBarFpanl.MaximumSize = new System.Drawing.Size(250, 220);
             this.homeBarFpanl.MinimumSize = new System.Drawing.Size(250, 50);
             this.homeBarFpanl.Name = "homeBarFpanl";
@@ -255,6 +254,7 @@ namespace myBase
             this.button8.Text = "      SubMenu";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -273,6 +273,7 @@ namespace myBase
             this.button6.Text = "      SubMenu";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -291,6 +292,7 @@ namespace myBase
             this.button7.Text = "      SubMenu";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
             // 
@@ -300,7 +302,7 @@ namespace myBase
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 184);
+            this.button3.Location = new System.Drawing.Point(3, 185);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(250, 50);
@@ -317,7 +319,7 @@ namespace myBase
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 240);
+            this.button4.Location = new System.Drawing.Point(3, 241);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(250, 50);
@@ -334,7 +336,7 @@ namespace myBase
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 296);
+            this.button2.Location = new System.Drawing.Point(3, 297);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(250, 50);
@@ -353,23 +355,118 @@ namespace myBase
             this.homeBarTimer.Interval = 10;
             this.homeBarTimer.Tick += new System.EventHandler(this.homeBarTimer_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.MaxIcon);
+            this.panel1.Controls.Add(this.MinIcon);
+            this.panel1.Controls.Add(this.CloseIcon);
+            this.panel1.Location = new System.Drawing.Point(250, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1150, 72);
+            this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // MaxIcon
+            // 
+            this.MaxIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaxIcon.BackColor = System.Drawing.Color.Transparent;
+            this.MaxIcon.FlatAppearance.BorderSize = 0;
+            this.MaxIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MaxIcon.Font = new System.Drawing.Font("Webdings", 10.8F);
+            this.MaxIcon.ForeColor = System.Drawing.Color.Silver;
+            this.MaxIcon.Location = new System.Drawing.Point(1049, 3);
+            this.MaxIcon.MouseEnterColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.MaxIcon.MouseLeaveColor = System.Drawing.Color.Transparent;
+            this.MaxIcon.Name = "MaxIcon";
+            this.MaxIcon.Size = new System.Drawing.Size(45, 45);
+            this.MaxIcon.TabIndex = 2;
+            this.MaxIcon.Text = "1";
+            this.MaxIcon.UseVisualStyleBackColor = false;
+            this.MaxIcon.Click += new System.EventHandler(this.MaxIcon_Click);
+            // 
+            // MinIcon
+            // 
+            this.MinIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MinIcon.BackColor = System.Drawing.Color.Transparent;
+            this.MinIcon.FlatAppearance.BorderSize = 0;
+            this.MinIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinIcon.Font = new System.Drawing.Font("Webdings", 10.8F);
+            this.MinIcon.ForeColor = System.Drawing.Color.Silver;
+            this.MinIcon.Location = new System.Drawing.Point(998, 3);
+            this.MinIcon.MouseEnterColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.MinIcon.MouseLeaveColor = System.Drawing.Color.Transparent;
+            this.MinIcon.Name = "MinIcon";
+            this.MinIcon.Size = new System.Drawing.Size(45, 45);
+            this.MinIcon.TabIndex = 1;
+            this.MinIcon.Text = "0";
+            this.MinIcon.UseVisualStyleBackColor = false;
+            this.MinIcon.Click += new System.EventHandler(this.MinIcon_Click);
+            // 
+            // CloseIcon
+            // 
+            this.CloseIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseIcon.BackColor = System.Drawing.Color.Transparent;
+            this.CloseIcon.FlatAppearance.BorderSize = 0;
+            this.CloseIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseIcon.Font = new System.Drawing.Font("Webdings", 10.8F);
+            this.CloseIcon.ForeColor = System.Drawing.Color.Silver;
+            this.CloseIcon.Location = new System.Drawing.Point(1100, 3);
+            this.CloseIcon.MouseEnterColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.CloseIcon.MouseLeaveColor = System.Drawing.Color.Transparent;
+            this.CloseIcon.Name = "CloseIcon";
+            this.CloseIcon.Size = new System.Drawing.Size(45, 45);
+            this.CloseIcon.TabIndex = 0;
+            this.CloseIcon.Text = "r";
+            this.CloseIcon.UseVisualStyleBackColor = false;
+            this.CloseIcon.Click += new System.EventHandler(this.CloseIcon_Click);
+            // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Location = new System.Drawing.Point(250, 130);
+            this.ContentPanel.Name = "ContentPanel";
+            this.ContentPanel.Size = new System.Drawing.Size(1150, 616);
+            this.ContentPanel.TabIndex = 4;
+            // 
+            // panelBarHeader
+            // 
+            this.panelBarHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBarHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panelBarHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBarHeader.Location = new System.Drawing.Point(250, 72);
+            this.panelBarHeader.Name = "panelBarHeader";
+            this.panelBarHeader.Size = new System.Drawing.Size(1150, 54);
+            this.panelBarHeader.TabIndex = 3;
+            // 
             // Base
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.panelBarHeader);
+            this.Controls.Add(this.ContentPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.sidBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Base";
             this.ShowIcon = false;
             this.Text = "Base";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Base_FormClosing);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.sidBar.ResumeLayout(false);
             this.he.ResumeLayout(false);
             this.homeBarFpanl.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -382,13 +479,18 @@ namespace myBase
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer sidBarTimer;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panLine;
         private System.Windows.Forms.Timer homeBarTimer;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel homeBarFpanl;
+        private UControls.UIconButton MaxIcon;
+        private UControls.UIconButton MinIcon;
+        private UControls.UIconButton CloseIcon;
+        private Panel panel1;
+        private Panel ContentPanel;
+        private FlowLayoutPanel panelBarHeader;
     }
 }
 
