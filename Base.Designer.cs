@@ -50,24 +50,24 @@ namespace myBase
 
         private void sidabarTimer_Tick(object sender, EventArgs e)
         {
-            if (sidbarExpend)
-            {
-                sidBar.Width -= 30;
-                if (sidBar.Width == sidBar.MinimumSize.Width)
-                {
-                    sidbarExpend = false;
-                    sidBarTimer.Stop();
-                }
-            }
-            else
-            {
-                sidBar.Width += 30;
-                if (sidBar.Width == sidBar.MaximumSize.Width)
-                {
-                    sidbarExpend = true;
-                    sidBarTimer.Stop();
-                }
-            }
+            //if (sidbarExpend)
+            //{
+            //    sidBar.Width -= 30;
+            //    if (sidBar.Width == sidBar.MinimumSize.Width)
+            //    {
+            //        sidbarExpend = false;
+            //        sidBarTimer.Stop();
+            //    }
+            //}
+            //else
+            //{
+            //    sidBar.Width += 30;
+            //    if (sidBar.Width == sidBar.MaximumSize.Width)
+            //    {
+            //        sidbarExpend = true;
+            //        sidBarTimer.Stop();
+            //    }
+            //}
         }
         private void homeBarTimer_Tick(object sender, EventArgs e)
         {
@@ -93,7 +93,7 @@ namespace myBase
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            sidBarTimer.Start();
+            //sidBarTimer.Start();
         }
         private void button1_Click(object sender, EventArgs e)
         {
